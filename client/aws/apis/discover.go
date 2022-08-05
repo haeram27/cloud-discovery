@@ -1,8 +1,8 @@
 package apis
 
 import (
-	apps "awsdisc/apps"
-	"awsdisc/client/k8sapis"
+	apps "cloudisc/apps"
+	"cloudisc/client/k8sapis"
 	"encoding/json"
 )
 

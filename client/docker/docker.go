@@ -1,7 +1,7 @@
 package dkr
 
 import (
-	"awsdisc/apps"
+	"cloudisc/apps"
 	"context"
 	"encoding/base64"
 	"encoding/json"
@@ -15,9 +15,9 @@ import (
 )
 
 /*
-   WARNING: This Login function to Registry is just EXAMPLE to check usage.
-   Docker client can not pull image from registry without auth config in ImagePull() API
-   even after this Login is successed
+WARNING: This Login function to Registry is just EXAMPLE to check usage.
+Docker client can not pull image from registry without auth config in ImagePull() API
+even after this Login is successed
 */
 func Login(url string, awsEcrAuthTok string) {
 	ctx := context.Background()
@@ -47,7 +47,7 @@ func Login(url string, awsEcrAuthTok string) {
 }
 
 /*
-   WARNING: authentication information SHOULD be set Options of API
+WARNING: authentication information SHOULD be set Options of API
 */
 func PullImage(uri string, awsEcrAuthTok string) error {
 	ctx := context.Background()

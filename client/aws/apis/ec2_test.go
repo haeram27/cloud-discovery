@@ -1,7 +1,7 @@
 package apis
 
 import (
-	"awsdisc/apps/util"
+	"cloudisc/apps/util"
 	"encoding/json"
 	"testing"
 )

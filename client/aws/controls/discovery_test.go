@@ -1,7 +1,7 @@
 package controls
 
 import (
-	"awsdisc/apps/util"
+	"cloudisc/apps/util"
 	"fmt"
 	"testing"
 )

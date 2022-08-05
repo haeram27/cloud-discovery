@@ -1,7 +1,7 @@
 package apis
 
 import (
-	apps "awsdisc/apps"
+	apps "cloudisc/apps"
 	"context"
 	"encoding/json"
 	"io/fs"
@@ -40,14 +40,15 @@ func AwsConfig() *aws.Config {
 
 /*
 /tmp/awsuser.json:
-{
-	"AccessKeyId": "access_key_id",          // mandatory
-	"SecretAccessKey": "secret_access_key",  // mandatory
-	"SessionToken": "session_token",
-	"Expiration": "expiration",
-	"Region": "region",                      // mandatory
-	"RoleArn": "role_arn"
-}
+
+	{
+		"AccessKeyId": "access_key_id",          // mandatory
+		"SecretAccessKey": "secret_access_key",  // mandatory
+		"SessionToken": "session_token",
+		"Expiration": "expiration",
+		"Region": "region",                      // mandatory
+		"RoleArn": "role_arn"
+	}
 */
 func updateCredsFromFile() bool {
 	newCredsFileStat, err := os.Stat(credsFilePath)
@@ -117,8 +118,8 @@ func StaticCredentialConfig(akid string, seckey string, token string) (aws.Confi
 }
 
 /*
-	AssumeRoleXXXConfig() makes aws.Config performed assume-role process.
-	stsUserCfg can be made by  DefaultConfig(), SharedProfileConfig(), StaticCredentialConfig()
+AssumeRoleXXXConfig() makes aws.Config performed assume-role process.
+stsUserCfg can be made by  DefaultConfig(), SharedProfileConfig(), StaticCredentialConfig()
 */
 func AssumeRoleConfig(stsUserCfg *aws.Config, roleArn string) {
 	stsSvc := sts.NewFromConfig(*stsUserCfg)
@@ -141,9 +142,9 @@ func AssumeRoleCustomMFAConfig(stsUserCfg *aws.Config, roleArn string, mfaSerial
 }
 
 /*
-	akId : user's Access Key ID
-	secKey : user's Secret Access Key
-	roleArn : arn of role
+akId : user's Access Key ID
+secKey : user's Secret Access Key
+roleArn : arn of role
 */
 func StsAssumeRoleConfig(c *CicdCreds) (*aws.Config, error) {
 	cfg, err := StaticCredentialConfig(c.AccessKeyId, c.SecretAccessKey, "")
@@ -164,7 +165,7 @@ func StsAssumeRoleConfig(c *CicdCreds) (*aws.Config, error) {
 }
 
 /*
-	auth for testing
+auth for testing
 */
 func StsAssumeRoleConfigFromFile() *aws.Config {
 	lock.Lock()

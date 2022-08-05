@@ -1,8 +1,8 @@
 package apis
 
 import (
-	"awsdisc/apps"
-	"awsdisc/apps/util"
+	"cloudisc/apps"
+	"cloudisc/apps/util"
 	"testing"
 )
 

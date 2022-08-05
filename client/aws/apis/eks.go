@@ -1,7 +1,7 @@
 package apis
 
 import (
-	apps "awsdisc/apps"
+	apps "cloudisc/apps"
 	"context"
 	"encoding/base64"
 	"errors"
@@ -147,7 +147,7 @@ func EKSK8sConfig(cluster *types.Cluster) (*rest.Config, error) {
 }
 
 /*
-  Resolve k8s config for k8s sdk from eks cluster information
+Resolve k8s config for k8s sdk from eks cluster information
 */
 func EKSK8sClientset(cluster *types.Cluster) (*kubernetes.Clientset, error) {
 	cfg, err := EKSK8sConfig(cluster)

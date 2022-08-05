@@ -1,9 +1,9 @@
 package controls
 
 import (
-	"awsdisc/apps"
-	"awsdisc/apps/util"
-	"awsdisc/client/gcp/apis"
+	"cloudisc/apps"
+	"cloudisc/apps/util"
+	"cloudisc/client/gcp/apis"
 )
 
 func GCPListInstances() error {

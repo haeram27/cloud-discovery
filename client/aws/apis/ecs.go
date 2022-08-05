@@ -1,7 +1,7 @@
 package apis
 
 import (
-	apps "awsdisc/apps"
+	apps "cloudisc/apps"
 	"context"
 	"errors"
 

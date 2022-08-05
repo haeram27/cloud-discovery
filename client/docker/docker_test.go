@@ -1,7 +1,7 @@
 package dkr
 
 import (
-	aws "awsdisc/client/aws/apis"
+	aws "cloudisc/client/aws/apis"
 	"testing"
 )
 

@@ -1,9 +1,9 @@
 package controls
 
 import (
-	"awsdisc/apps"
-	"awsdisc/apps/util"
-	aws "awsdisc/client/aws/apis"
+	"cloudisc/apps"
+	"cloudisc/apps/util"
+	aws "cloudisc/client/aws/apis"
 	"encoding/json"
 	"fmt"
 )

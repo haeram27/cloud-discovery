@@ -4,6 +4,6 @@ import (
 	"testing"
 )
 
-func TestGCPResourceMngrListProjects(t *testing.T) {
+func TestGCPListInstances(t *testing.T) {
 	GCPListInstances()
 }

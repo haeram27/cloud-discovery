@@ -1,8 +1,8 @@
 package util
 
 import (
-	apps "awsdisc/apps"
 	"bytes"
+	apps "cloudisc/apps"
 	"encoding/json"
 	"errors"
 

@@ -1,8 +1,8 @@
 package apis
 
 import (
-	apps "awsdisc/apps"
-	"awsdisc/apps/util"
+	apps "cloudisc/apps"
+	"cloudisc/apps/util"
 	"context"
 	"encoding/json"
 	"errors"
@@ -164,18 +164,19 @@ func ECRListImagesAllST(cfg *aws.Config) []EcrImage {
 }
 
 /*
-	ecr.GetAuthorizationToken API return token(base64 encoded string)
-	that has format as <USERNAME>:<PASSWORD> when it decoded.
-	<USERNAME> is "AWS" so far and <PASSWORD> is token encoded string.
-	For the use of returned token, token SHOULD be base64 decoded and distinguished with <USERNAME> and <PASSWORD>.
+ecr.GetAuthorizationToken API return token(base64 encoded string)
+that has format as <USERNAME>:<PASSWORD> when it decoded.
+<USERNAME> is "AWS" so far and <PASSWORD> is token encoded string.
+For the use of returned token, token SHOULD be base64 decoded and distinguished with <USERNAME> and <PASSWORD>.
 
-	// EXAMPLE
-	data, err := base64.URLEncoding.DecodeString(awsEcrAuthTok)
+// EXAMPLE
+data, err := base64.URLEncoding.DecodeString(awsEcrAuthTok)
+
 	if err != nil {
 		apps.Logs.Error(err)
 	}
 
-	parts := strings.SplitN(string(data), ":", 2)
+parts := strings.SplitN(string(data), ":", 2)
 
 	auth := types.AuthConfig{
 		Username: parts[0],

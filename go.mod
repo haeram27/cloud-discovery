@@ -1,4 +1,4 @@
-module awsdisc
+module cloudisc
 
 go 1.18
 

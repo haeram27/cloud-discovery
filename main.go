@@ -1,7 +1,7 @@
 package main
 
 import (
-	apps "awsdisc/apps"
+	apps "cloudisc/apps"
 )
 
 func main() {
