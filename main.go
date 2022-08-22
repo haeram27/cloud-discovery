@@ -1,7 +1,7 @@
 package main
 
 import (
-	apps "cloudisc/apps"
+	"cloudisc/apps"
 )
 
 func main() {

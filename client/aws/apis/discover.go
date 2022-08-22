@@ -1,7 +1,7 @@
 package apis
 
 import (
-	apps "cloudisc/apps"
+	"cloudisc/apps"
 	"cloudisc/client/k8sapis"
 	"encoding/json"
 )

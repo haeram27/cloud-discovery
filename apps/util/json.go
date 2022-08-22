@@ -2,7 +2,7 @@ package util
 
 import (
 	"bytes"
-	apps "cloudisc/apps"
+	"cloudisc/apps"
 	"encoding/json"
 	"errors"
 

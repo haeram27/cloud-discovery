@@ -1,7 +1,7 @@
 package apis
 
 import (
-	apps "cloudisc/apps"
+	"cloudisc/apps"
 	"cloudisc/apps/util"
 	"context"
 	"encoding/json"
